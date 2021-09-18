@@ -9,9 +9,13 @@ $(document).ready(function () {
       dataType:'json',
       success: function (response, textStatus) {
         $('#todo-list').empty();
+
         response.tasks.forEach(function (task) {
-          console.log(response);
-          $('#todo-list').append('<p>' + task.content + '</p>');
+          
+  console.log(response);
+          $('#todo-list').append('<div class="row"><p class="col-xs-8">' + task.content +
+          '</p><button class="btn btn-danger delete" data-id="' + task.id +
+           '"><i class="fas fa-minus"></i></button>');
         })
       },
       error: function (request, textStatus, errorMessage) {
@@ -65,8 +69,7 @@ $(document).ready(function () {
 $(document).on('click', '.delete', function () {
   deleteTask($(this).data('id'))
 });
-  displayTask();
-  
+
  let markComplete = function () {
    $.ajax({
     type:'PUT',
@@ -81,3 +84,6 @@ $(document).on('click', '.delete', function () {
   })
 }
 });
+
+  
+
