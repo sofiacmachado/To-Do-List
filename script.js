@@ -71,7 +71,8 @@ $(document).on('click', '.delete', function () {
   deleteTask($(this).data('id'))
 });
 
- let markComplete = function () {
+/* Mark Complete */
+ let markComplete = function (id) {
    $.ajax({
     type:'PUT',
     url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + id +'/mark_complete?api_key=140',
@@ -88,8 +89,26 @@ $(document).on('click', '.delete', function () {
 $(document).on('change', '.mark-complete', function() {
   if (this.checked) {
     markComplete($(this).data('id'));
+  } else {
+    activeTask($(this).data('id'));
   }
 })
+
+/* Mark Active */
+let activeTask = function(id) {
+  $.ajax({
+    type:'PUT',
+    url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + id +'/mark_active?api_key=140',
+    dataType: 'json',
+    success: function(response, textStatus) {
+      displayTask();
+    },
+    error: function (request, textStatus, errorMessage){
+      console.log(errorMessage);
+    }
+  })
+}
+
 });
 
   
