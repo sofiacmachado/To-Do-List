@@ -1,8 +1,6 @@
-.delete {
-
-    margin-right: 5px;
-  
-  }
+body {
+  font-family: 'Playfair Display';
+}
 
   header {
     background-image: url("../../GitHub/To-Do-List/images/header.jpg");
@@ -12,4 +10,12 @@
 
   #title {
     padding: 210px 260px;
+   /*  font-style: italic; */
+    font-weight: 400;
+  }
+
+  .delete {
+
+    margin-right: 5px;
+  
   }
