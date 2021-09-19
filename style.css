@@ -3,3 +3,13 @@
     margin-right: 5px;
   
   }
+
+  header {
+    background-image: url("../../GitHub/To-Do-List/images/header.jpg");
+    background-size: cover;
+    height: 300px;
+  }
+
+  #title {
+    padding: 210px 260px;
+  }

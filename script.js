@@ -109,6 +109,8 @@ let activeTask = function(id) {
   })
 }
 
+/* Filter Tasks */
+
 });
 
   
