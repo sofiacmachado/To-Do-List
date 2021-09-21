@@ -21,19 +21,20 @@ body {
   }
 
   #input-task {
+    background-color:rgba(206, 136, 146, 0.200);
+    border: 10px;
     font-size: 20px;
     border-radius: 5px;
-    border-style: ;
+    border-style: none;
   }
 
   #new-todo {
     font-size: 20px;
   }
 
-  i {
-    size: 2px;
-  }
-  .btn {
-    height:max-content;
-    padding: 3px;
+ 
+  .btn-danger {
+    float:right;
+    height: max-content;
+    font-size: 10px;
   }
