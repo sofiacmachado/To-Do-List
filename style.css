@@ -19,3 +19,21 @@ body {
     margin-right: 5px;
   
   }
+
+  #input-task {
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: ;
+  }
+
+  #new-todo {
+    font-size: 20px;
+  }
+
+  i {
+    size: 2px;
+  }
+  .btn {
+    height:max-content;
+    padding: 3px;
+  }

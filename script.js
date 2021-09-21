@@ -13,7 +13,7 @@ $(document).ready(function () {
         response.tasks.forEach(function (task) {
           
   console.log(response);
-          $('#todo-list').append('<div class="row"><p class="col-xs-8">' + task.content +
+          $('#todo-list').append('<div class="row"><p class="col-xs-8" id="new-todo">' + task.content +
           '</p><button class="btn btn-danger delete" data-id="' + task.id +
            '"><i class="fas fa-minus"></i></button><input type="checkbox" class="mark-complete" data-id="'
            + task.id + '"' + (task.completed ? 'checked' : '') + '>');
