@@ -26,22 +26,25 @@
     
   <body>
     <header>
-      <h1 id='title'>To-Do List</h1>
+      <h1 class='ml-5' id='title'>To-Do List</h1>
     </header>
     <div class='container mt-4'>
       <div class='row'>
-        <div class='col-6'>
+        <div class='sm-col-6'>
       
           <form id='input-form'>
             <!-- adding new tasks -->
             <input id='input-task' name='new-to-do' type='text' placeholder='Add new task' required>
-            <button class='btn btn-success ml-2 btn-sm' id='add-button'><i class="fas fa-plus"></i></button>
+            <button class='btn btn-success ml-2 mr-5 mb-1 btn-sm ' id='add-button'><i class="fas fa-plus"></i></button>
           </form>
+         
+          <div id='todo-list' class='mt-4 ml-4 mr-5'>
+        </div>
+        <!-- filter buttons -->
+        <div class='filter-buttons d-flex justify-content-end'>
+          <p>Completed Tasks<input class='ml-1 mr-2 filter-btn' type='checkbox' id='complete-btn'></p>
+          <p>Pending Tasks<input class='ml-1 filter-btn' type='checkbox' id='active-btn'></p>
 
-          <div id='todo-list' class='mt-4 ml-4'>
-            <!-- Tasks List -->
-           <!--  <div class='new-to-do'>Do Laundry<button class='btn btn-light' id='remove-button'><i class="fas fa-minus"></i></button></div>
-            <div class='new-to-do'>Create To-Do List<button class='btn btn-light' id='remove-button'><i class="fas fa-minus"></i></button></div> -->
         </div>
 
       </div>
