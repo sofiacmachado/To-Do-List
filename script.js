@@ -86,13 +86,8 @@ $(document).on('click', '.delete', function () {
   })
 }
 
-$(document).on('change', '.mark-complete', function() {
-  if (this.checked) {
-    markComplete($(this).data('id'));
-  } else {
-    activeTask($(this).data('id'));
-  }
-})
+
+
 
 /* Mark Active */
 let activeTask = function(id) {
@@ -109,20 +104,33 @@ let activeTask = function(id) {
   })
 }
 
+$(document).on('change', '.mark-complete', function() {
+  if (this.checked) {
+    markComplete($(this).data('id'));
+  } else {
+    activeTask($(this).data('id'));
+  }
+})
+
+
 /* Filter Tasks */
-let filterTask = function(id) {
-  $.ajax({
-    type:'PUT',
-    url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + id +'/mark_active?api_key=140',
-    dataType: 'json',
-    success: function(response, textStatus) {
-      displayTask();
-    },
-    error: function (request, textStatus, errorMessage){
-      console.log(errorMessage);
-    }
-  })
-}
+
+
+$(document).on('change', '#active-btn', function() {
+  if (this.checked) {
+    $(".mark-complete:checked").parent().hide();
+  } else {
+    $(".mark-complete:checked").parent().show();
+  }
+});
+
+$(document).on('change', '#complete-btn', function() {
+  if (this.checked) {
+    $(".mark-complete:not(:checked)").parent().hide();
+  } else {
+    $(".mark-complete:not(:checked)").parent().show();
+  }
+});
 
 });
 
